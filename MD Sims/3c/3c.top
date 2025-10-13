@@ -1,0 +1,37 @@
+; kcbetho2ch2_GMX.top created by acpype (v: 2023.10.27) on Wed Jul  3 16:59:13 2024
+
+#include "/home/bcolella/downloads/gromacs-2019.3/share/top/amber99sb-ildn.ff/forcefield.itp"
+
+;Water
+#include "/home/bcolella/downloads/gromacs-2019.3/share/top/amber99sb-ildn.ff/tip3p.itp"
+
+;Ions
+#include "/home/bcolella/downloads/gromacs-2019.3/share/top/amber99sb-ildn.ff/ions.itp"
+
+; Include kcbetho2ch2_GMX.itp topology
+#include "kcbetho2ch2.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_kcbetho2ch2.itp"
+#endif
+
+; Include psiietho2ch2_GMX.itp topology
+#include "psiietho2ch2.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_psiietho2ch2.itp"
+#endif
+
+
+[ system ]
+kcbetho2ch2 in water
+
+[ molecules ]
+; Compound        nmols
+KCB      1
+PSI      1     
+SOL         2005
+NA               4
+CL               4
