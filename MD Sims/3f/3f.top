@@ -1,0 +1,36 @@
+; kcb_GMX.top created by acpype (v: 2022.7.21) on Mon Feb 19 14:26:40 2024
+
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/forcefield.itp"
+
+; Include kcb_GMX.itp topology
+#include "kcb.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_kcb.itp"
+#endif
+
+; Include psii_GMX.itp topology
+#include "psii.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_psii.itp"
+#endif
+
+; Water in topology
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/tip3p.itp
+
+; Ions in topology
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/ions.itp"
+
+[ system ]
+KCB in water
+
+[ molecules ]
+; Compound        nmols
+ KCB              1     
+ PSI              1
+SOL         2316
+NA               4
+CL               4
