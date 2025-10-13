@@ -1,0 +1,35 @@
+; p344o_kcb_GMX.top created by acpype (v: 2022.7.21) on Fri May  3 12:14:32 2024
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/forcefield.itp"
+
+; Include p344o_kcb_GMX.itp topology
+#include "p344o_kcb.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_p344o_kcb.itp"
+#endif
+
+; Include p344o_psii_GMX.itp topology
+#include "p344o_psii.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_p344o_psii.itp"
+#endif
+
+; Water in topology
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/tip3p.itp
+
+; Ions in topology
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/ions.itp"
+
+[ system ]
+p344o in water
+
+[ molecules ]
+; Compound        nmols
+ KCB        1   
+ PSI        1  
+SOL         1977
+NA               4
+CL               5
