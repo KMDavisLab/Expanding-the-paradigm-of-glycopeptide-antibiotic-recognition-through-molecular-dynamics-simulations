@@ -1,0 +1,37 @@
+; kcboxzo2c_GMX.top created by acpype (v: 2023.10.27) on Fri Jun 14 15:23:26 2024
+
+#include "/home/bcolella/downloads/gromacs-2019.3/share/top/amber99sb-ildn.ff/forcefield.itp"
+
+; Water in topology 
+#include "/home/bcolella/downloads/gromacs-2019.3/share/top/amber99sb-ildn.ff/tip3p.itp
+
+; Ions in topology 
+#include "/home/bcolella/downloads/gromacs-2019.3/share/top/amber99sb-ildn.ff/ions.itp"
+
+; Include kcboxzo2c_GMX.itp topology
+#include "kcboxzo2c.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_kcboxzo2c.itp"
+#endif
+
+; Include psii_GMX.itp topology
+#include "psii.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_psii.itp"
+#endif
+
+[ system ]
+kcboxzo2c in water
+
+[ molecules ]
+; Compound        nmols
+KCB        1
+PSI	   1     
+
+SOL         2004
+NA               4
+CL               4
