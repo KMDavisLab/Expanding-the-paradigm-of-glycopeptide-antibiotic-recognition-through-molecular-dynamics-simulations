@@ -1,0 +1,35 @@
+; DvancoDala_dvan_GMX.top created by acpype (v: 2022.7.21) on Mon Jul 31 15:53:49 2023
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/forcefield.itp"
+
+; Include DvancoDala_dvan_GMX.itp topology
+#include "DvancoDala_dvan_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_DvancoDala_dvan.itp"
+#endif
+
+; Include DvancoDala_ala_GMX.itp topology 
+#include "DvancoDala_ala_GMX.itp"   
+
+; Ligand position restraints 
+#ifdef POSRES_LIG 
+#include "posre_DvancoDala_ala.itp" 
+#endif
+
+; Water in topology 
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/tip3p.itp
+
+; Ions in topology
+#include "/home/bdratch/downloads/gromacs/gromacs-2019.3/share/top/amber99sb-ildn.ff/ions.itp"
+
+[ system ]
+DvancoDala in water
+
+[ molecules ]
+; Compound        nmols
+ DVAN  1
+ DALA  1     
+SOL         1577
+NA               3
+CL               3
