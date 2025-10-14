@@ -1,6 +1,6 @@
 This repository contains the computational data supporting the findings of the study titled 'Expanding the paradigm of glycopeptide antibiotic recognition through molecular dynamics simulations'.
 
-The 'Starting Structures' folder contains the DFT optimized structures used as starting models for the study.
+The 'Starting Structures' folder contains the DFT optimized starting structures of 3a used for this study and our previous study titled 'Potent and specific antibiotic combination therapy against Clostridioides difficile' (doi.org/10.1038/s41589-024-01651-z).
 
 The 'Molecular Dynamics Simulations' folder contains the input and output files for GROMACS v2019.3 molecular dynamics simulations. Each system was run in triplicate. Sub-folder indicate whether the glycopeptide antibiotic was complexed with the 'Tripeptide' or 'Polysaccharide II'. 
 
