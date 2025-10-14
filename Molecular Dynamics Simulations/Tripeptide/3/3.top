@@ -1,0 +1,35 @@
+; KCB_DALA_final
+
+#include "/mnt/c/Users/kirkl/Desktop/gromacs2019.3/gromacs-2019.3/share/top/amber99sb-ildn.ff/forcefield.itp"
+
+#include "KCB_GMX.itp"
+
+#ifdef POSRES
+#include "posre_KCB.itp"
+#endif
+
+; Include DALA_KCB_noSugs_GMX.itp topology
+#include "DALA_fromKCB_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES
+#include "posre_DALA_fromKCB.itp"
+#endif
+
+; Water in topology
+#include "/mnt/c/Users/kirkl/Desktop/gromacs2019.3/gromacs-2019.3/share/top/amber99sb-ildn.ff/tip3p.itp"
+
+; Ions in topology
+#include "/mnt/c/Users/kirkl/Desktop/gromacs2019.3/gromacs-2019.3/share/top/amber99sb-ildn.ff/ions.itp"
+
+[ system ]
+KCB_DALA in water
+
+[ molecules ]
+; Compound        nmols
+ KCB  1     
+DAL 1
+
+SOL         1599
+NA               4
+CL               3
