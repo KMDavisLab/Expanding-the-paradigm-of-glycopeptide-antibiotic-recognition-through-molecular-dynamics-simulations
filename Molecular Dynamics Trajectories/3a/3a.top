@@ -1,0 +1,36 @@
+; KCB_D3_GMX.top created by acpype (v: 2022.7.21) on Mon Dec 18 12:14:41 2023
+
+#include "/mnt/c/Users/kirkl/Desktop/gromacs2019.3/gromacs-2019.3/share/top/amber99sb-ildn.ff/forcefield.itp"
+
+; Include KCB_D3_GMX.itp topology
+#include "KCB_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES
+#include "posre_KCB.itp"
+#endif
+
+; Include PSII_D3_GMX.itp topology
+#include "PSI_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES
+#include "posre_PSI.itp"
+#endif
+
+; Water in topology
+#include "/mnt/c/Users/kirkl/Desktop/gromacs2019.3/gromacs-2019.3/share/top/amber99sb-ildn.ff/tip3p.itp"
+
+; Ions in topology
+#include "/mnt/c/Users/kirkl/Desktop/gromacs2019.3/gromacs-2019.3/share/top/amber99sb-ildn.ff/ions.itp"
+
+[ system ]
+KCB_D3 in water
+
+[ molecules ]
+; Compound        nmols
+ KCB           1     
+ PSI          1
+SOL         2005
+NA               4
+CL               4
