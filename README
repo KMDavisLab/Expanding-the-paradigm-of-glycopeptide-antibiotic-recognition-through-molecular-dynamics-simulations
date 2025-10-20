@@ -2,7 +2,7 @@ This repository contains the computational data supporting the findings of the s
 
 The 'Starting Structures' folder contains the DFT optimized starting structures of 3a used for this study and our previous study titled 'Potent and specific antibiotic combination therapy against Clostridioides difficile' (doi.org/10.1038/s41589-024-01651-z).
 
-The 'Molecular Dynamics Simulations' folder contains the input and output files for GROMACS v2019.3 molecular dynamics simulations. Each system was run in triplicate. Sub-folder indicate whether the glycopeptide antibiotic was complexed with the 'Tripeptide' or 'Polysaccharide II'. 
+The 'Molecular Dynamics Simulations' folder contains the input and output files for GROMACS v2019.3 molecular dynamics simulations. Each system was run in triplicate. Sub-folder indicates whether the glycopeptide antibiotic was complexed with the 'Tripeptide' or 'Polysaccharide II'. 
 
 Glycopeptide antibiotics are abbreviated using the same notation as in the manuscript.
 
